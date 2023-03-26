@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>store food</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+  <!-- Font Awesome -->
+  <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script> -->
+  <script src="https://kit.fontawesome.com/9fec01c267.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <a class="navbar-brand" href="">Food storage</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#pricing">sign in/sign up</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#cta">feedback</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+
+
+      <!-- Title -->
+
+    <div class="row">
+
+      <div class="col-lg-6">
+        <h1 class="big-heading">Keep Your Food fresh and healthy .</h1>
+
+      </div>
+
+      <div class="col-lg-6">
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- Pricing -->
+
+<section class="white-section" id="pricing">
+
+  <h2 class="section-heading">Different vegetable and fruits. </h2>
+  <p>Simple and easy process to keep your product safe.</p>
+
+  <div class="row">
+
+    <div class="pricing-column col-lg-4 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h3>Chamber 1</h3>
+        </div>
+        <div class="card-body">
+         <img src="potato.jpeg" class="product-image" alt="">
+
+          <h3>Potato</h3>
+          <p ><b>Temprature</b></p>
+           <span >Coolant(in F): </span>
+           <h7 id="coolant" ></h7>
+           <div class="w3-border" style="display: inline; border:1px solid #ccc!important">
+            <div class="w3-grey" style="color:#fff!important;
+            background-color:#2196F3!important;height:10px;width:00%"></div>
+          </div>
+          <br>
+
+          <span >Vegetable(in F): </span>
+          <h7 id="vegetable" ></h7>
+          <div class="w3-border" style="display: inline; border:1px solid #ccc!important">
+           <div class="w4-grey" style="color:#fff!important;
+           background-color:#2196F3!important;height:10px;width:00%"></div>
+         </div>
+         <br>
+         <span style="color: #8f8f8f;" > <b> Humidity(%): </b></span>
+         <h7 id="humidity" ></h7>
+         <div class="w3-border" style="display: inline; border:1px solid #ccc!important">
+          <div class="w5-grey" style="color:#fff!important;
+          background-color:#2196F3!important;height:10px;width:00%"></div>
+        </div>
+        <p> <b> Secuirity</b> </p>
+          <span >Preservative conditions:</span> <h7 class="preservativeCondns" id="preserved" style="color: green;"></h7>
+          <br>
+          <br>
+          <span >Door status:</span><h7 class="gateStat" id="gateStatus" style="color: green;"></h7>
+          <br>
+          <br>
+          <span >motionStatus:</span><h7 class="motionStat" id="motionStatus" style="color: green;"></h7>
+          <!-- <button class="btn btn-lg btn-block btn-outline-dark" type="button">Sign Up</button> -->
+        </div>
+      </div>
+    </div>
+    <!-- <div class="popup-image">
+      <span>&time;</span>
+      <img src="images/pot1.jpeg" alt="">
+    </div> -->
+
+    <div class="pricing-column col-lg-4 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h3>Chamber 2</h3>
+        </div>
+        <div class="card-body">
+          <img src="onion.jpeg" class="product-image" alt="">
+          <h3>Onion</h3>
+          <p ><b>Temprature</b></p>
+           <span >Coolant(in F): </span>
+           <h7 id="coolant" >56</h7>
+           <div class="w3-border" style="display: inline; border:1px solid #ccc!important">
+            <div class="w3-grey" style="color:#fff!important;
+            background-color:#2196F3!important;height:10px;width:60%"></div>
+          </div>
+          <br>
+
+          <span >Vegetable(in F): </span>
+          <h7 id="vegetable" >67</h7>
+          <div class="w3-border" style="display: inline; border:1px solid #ccc!important">
+           <div class="w4-grey" style="color:#fff!important;
+           background-color:#2196F3!important;height:10px;width:90%"></div>
+         </div>
+         <br>
+         <span style="color: #8f8f8f;" > <b> Humidity(%): </b></span>
+         <h7 id="humidity" >58</h7>
+         <div class="w3-border" style="display: inline; border:1px solid #ccc!important">
+          <div class="w5-grey" style="color:#fff!important;
+          background-color:#2196F3!important;height:10px;width:58%"></div>
+        </div>
+        <p> <b> Secuirity</b> </p>
+          <span >Preservative conditions:</span> <h7 class="preservativeCondns" id="preserved" style="color: RED;">preserve mode is OFF</h7>
+          <br>
+          <br>
+          <span >Door status:</span><h7 class="gateStat" id="gateStatus" style="color: green;">CLOSED</h7>
+          <br>
+          <br>
+          <span >motionStatus:</span><h7 class="motionStat" id="motionStatus" style="color: red;"> Motion detected</h7>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing-column col-lg-4">
+      <div class="card">
+        <div class="card-header">
+          <h3>Chamber 3 </h3>
+        </div>
+        <div class="card-body">
+           <img src="strwaberry.jpeg" class="product-image" alt="">
+          <h3>Stawbarry</h3>
+          <p ><b>Temprature</b></p>
+           <span >Coolant(in F): </span>
+           <h7 id="coolant" >56</h7>
+           <div class="w3-border" style="display: inline; border:1px solid #ccc!important">
+            <div class="w3-grey" style="color:#fff!important;
+            background-color:#2196F3!important;height:10px;width:60%"></div>
+          </div>
+          <br>
+
+          <span >Vegetable(in F): </span>
+          <h7 id="vegetable" >67</h7>
+          <div class="w3-border" style="display: inline; border:1px solid #ccc!important">
+           <div class="w4-grey" style="color:#fff!important;
+           background-color:#2196F3!important;height:10px;width:90%"></div>
+         </div>
+         <br>
+         <span style="color: #8f8f8f;" > <b> Humidity(%): </b></span>
+         <h7 id="humidity" >58</h7>
+         <div class="w3-border" style="display: inline; border:1px solid #ccc!important">
+          <div class="w5-grey" style="color:#fff!important;
+          background-color:#2196F3!important;height:10px;width:58%"></div>
+        </div>
+        <p> <b> Secuirity</b> </p>
+          <span >Preservative conditions:</span> <h7 class="preservativeCondns" id="preserved" style="color: RED;">preserve mode is OFF</h7>
+          <br>
+          <br>
+          <span >Door status:</span><h7 class="gateStat" id="gateStatus" style="color: green;">CLOSED</h7>
+          <br>
+          <br>
+          <span >motionStatus:</span><h7 class="motionStat" id="motionStatus" style="color: red;"> Motion detected</h7>
+        </div>
+      </div>
+    </div>
+    <div class="pricing-column col-lg-4">
+      <div class="card">
+        <div class="card-header">
+          <h3>Chamber 4 </h3>
+        </div>
+        <div class="card-body">
+           <img src="orange.jpeg" class="product-image" alt="">
+           <div class="container">
+
+          <h3>orange</h3>
+          <p ><b>Temprature</b></p>
+          <span >Coolant(in F): </span>
+          <h7 id="coolant" >56</h7>
+          <div class="w3-border" style="display: inline; border:1px solid #ccc!important">
+           <div class="w3-grey" style="color:#fff!important;
+           background-color:#2196F3!important;height:10px;width:60%"></div>
+         </div>
+         <br>
+
+         <span >Vegetable(in F): </span>
+         <h7 id="vegetable" >67</h7>
+         <div class="w3-border" style="display: inline; border:1px solid #ccc!important">
+          <div class="w4-grey" style="color:#fff!important;
+          background-color:#2196F3!important;height:10px;width:90%"></div>
+        </div>
+        <br>
+        <span style="color: #8f8f8f;" > <b> Humidity(%): </b></span>
+        <h7 id="humidity" >58</h7>
+        <div class="w3-border" style="display: inline; border:1px solid #ccc!important">
+         <div class="w5-grey" style="color:#fff!important;
+         background-color:#2196F3!important;height:10px;width:58%"></div>
+       </div>
+       <p> <b> Secuirity</b> </p>
+         <span >Preservative conditions:</span> <h7 class="preservativeCondns" id="preserved" style="color: RED;">preserve mode is OFF</h7>
+         <br>
+         <br>
+         <span >Door status:</span><h7 class="gateStat" id="gateStatus" style="color: green;">CLOSED</h7>
+         <br>
+         <br>
+         <span >motionStatus:</span><h7 class="motionStat" id="motionStatus" style="color: red;"> Motion detected</h7>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="pricing-column col-lg-4">
+      <div class="card">
+        <div class="card-header">
+          <h3>Chamber 5 </h3>
+        </div>
+        <div class="card-body">
+           <img src="grapes.jpeg" class="product-image" alt="">
+          <h3>Grapes</h3>
+          <p ><b>Temprature</b></p>
+          <span >Coolant(in F): </span>
+          <h7 id="coolant" >56</h7>
+          <div class="w3-border" style="display: inline; border:1px solid #ccc!important">
+           <div class="w3-grey" style="color:#fff!important;
+           background-color:#2196F3!important;height:10px;width:60%"></div>
+         </div>
+         <br>
+
+         <span >Vegetable(in F): </span>
+         <h7 id="vegetable" >67</h7>
+         <div class="w3-border" style="display: inline; border:1px solid #ccc!important">
+          <div class="w4-grey" style="color:#fff!important;
+          background-color:#2196F3!important;height:10px;width:90%"></div>
+        </div>
+        <br>
+        <span style="color: #8f8f8f;" > <b> Humidity(%): </b></span>
+        <h7 id="humidity" >58</h7>
+        <div class="w3-border" style="display: inline; border:1px solid #ccc!important">
+         <div class="w5-grey" style="color:#fff!important;
+         background-color:#2196F3!important;height:10px;width:58%"></div>
+       </div>
+       <p> <b> Secuirity</b> </p>
+         <span >Preservative conditions:</span> <h7 class="preservativeCondns" id="preserved" style="color: RED;">preserve mode is OFF</h7>
+         <br>
+         <br>
+         <span >Door status:</span><h7 class="gateStat" id="gateStatus" style="color: green;">CLOSED</h7>
+         <br>
+         <br>
+         <span >motionStatus:</span><h7 class="motionStat" id="motionStatus" style="color: red;"> Motion detected</h7>
+        </div>
+      </div>
+    </div>
+
+    <div   class="pricing-column col-lg-4 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h3 id="add">Add product</h3>
+        </div>
+        <div class="card-body">
+          <img src="" class="product-image" alt="image of new product"  >
+          <h3>Chamber 7</h3>
+          <p ><b>Temprature</b></p>
+           
+           <p>coolant:</p>
+           <p>vegetable:</p>
+          <p>humidity</p>
+          <p>preservative conditions:</p>
+          <p>secuirity:</p>
+          <p>gate status:</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- Testimonials -->
+
+<section class="colored-section" id="testimonials">
+
+  <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+    <div class="carousel-inner">
+      <div class="carousel-item active container-fluid">
+        <h2 class="testimonial-text">My food is not getting wasted by using this website and before that my food was getting wasted .</h2>
+        <!-- <img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile"> -->
+        <em> by Rakesh from - Patna, Bihar</em>
+      </div>
+      <div class="carousel-item container-fluid">
+        <h2 class="testimonial-text">By using this site you can control the wastage of product. </h2>
+        <em>by Ram-delhi.</em>
+      </div>
+      <div class="carousel-item container-fluid">
+        <h3 class="testimonial-text">Are you Storing Food Safely ? </h3>
+         <h2>if not use this website</h2>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+  <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+
+</section>
+<!-- <div class="comment">
+<h3> leave reply </h3>
+<textarea placeholder="Comment:" id="comment" name="comment" cols="45" rows="8" aria-required="true" style="border: 1px solid rgb(225, 225, 225);"></textarea>
+<div/>
+<section class="contact section bd-container" id="contact">
+              <div class="contact__container bd-grid">
+                  <div class="contact__data">
+                      <span class="section-subtitle contact__initial">Let's talk</span>
+                      <h2 class="section-title contact__initial">Contact us</h2>
+                      <p class="contact__description">If you want buy , contact us and we will attend you quickly, with our 24/7 chat service.</p>
+                  </div>
+                  <div class="contact__button">
+                      <a href="#" class="button">Contact us now</a>
+                  </div>
+              </div> -->
+          <!-- </section>
+        </div> -->
+
+<!-- Footer -->
+
+<footer class="white-section" id="footer">
+  <div class="container-fluid">
+    <i class="social-icon fab fa-facebook-f"></i>
+    <i class="social-icon fab fa-twitter"></i>
+    <i class="social-icon fab fa-instagram"></i>
+    <i class="social-icon fas fa-envelope"></i>
+    <p>© cold storage</p>
+  </div>
+</footer>
+
+
+</body>
+<script type="module">
+
+ 
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+  
+  const firebaseConfig = {
+apiKey: "AIzaSyBc1zW9myR2NuT1_9J8rdl7drhx8Y5jZy4",
+authDomain: "fir-contact-51ee2.firebaseapp.com",
+databaseURL: "https://fir-contact-51ee2-default-rtdb.firebaseio.com",
+projectId: "fir-contact-51ee2",
+storageBucket: "fir-contact-51ee2.appspot.com",
+messagingSenderId: "1071276867428",
+appId: "1:1071276867428:web:277919a3fe0adcb982c471",
+measurementId: "G-37ZGEF3EXT"
+};
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+
+
+  
+  import {getDatabase, ref, get, set, child, update, remove}
+  from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
+  //Copy and Paste the URL from near the top of the CDN you pasted in from firebase
+  // (the one where you imported "initializeApp" from),
+  //but change "firebase-app" to "firebase-database"
+
+
+    
+  const db = getDatabase();
+
+  // var userID = document.querySelector("#userID");
+  // var firstName= document.querySelector("#firstName");
+  // var lastName=document.querySelector("#lastName");
+  
+  // var userPassword = document.querySelector("#userPassword");
+  // var confirmPassword=document.querySelector("#confirmPassword");
+  // var userEmail = document.querySelector("#userEmail");
+  // var signUpButton = document.querySelector("#signUpButton");
+  var coolantt=document.querySelector("#coolant");
+  var vegetable=document.querySelector("#vegetable");
+  var humidity=document.querySelector("#humidity");
+  var preserved=document.querySelector("#preserved");
+  var motionStatus=document.querySelector("#motionStatus");
+  var gateStatus=document.querySelector("#gateStatus");
+ 
+
+  // function InsertData() {
+
+  //         set(ref(db, "People/"+ userID.value),{
+              
+  //             ID: userID.value,
+  //             FirstName: firstName.value,
+  //             Lastname: lastName.value,
+              
+  //             Password: userPassword.value,
+  //             confirmPassword:confirmPassword.value,
+  //             Email:userEmail.value,
+  //         })
+  //         .then(()=>{
+  //             alert("Sign up successfully");
+              
+  //         })
+  //         .catch((error)=>{
+  //             alert(error);
+  //         });
+  //     }
+     
+      // function CheckData() {
+      //     const dbref = ref(db);
+
+      //     get(child(dbref, "People/" + userID.value))
+      //     .then((snapshot)=>{
+      //         if(snapshot.exists()){
+      //             if(userID.value===snapshot.val().ID) 
+      //            {
+      //             alert("ID already used");
+      //            } 
+      //            else{
+      //             InsertData;
+      //            }
+                 
+      //         } else {
+      //            // InsertData;
+      //         }
+      //     })
+      //     .catch((error)=>{
+      //         alert(error)
+      //     })
+
+      // }   
+      function FindData() {
+            const dbref = ref(db);
+
+            get(child(dbref, "chamber1/" ))
+            .then((snapshot)=>{
+                if(snapshot.exists()){
+                   coolantt.innerHTML=   snapshot.val().Coolantt;
+                   vegetable.innerHTML= snapshot.val().VegetableT;
+                   humidity.innerHTML=snapshot.val().Humidity;
+                   preserved.innerHTML=snapshot.val().Preserved;
+                   gateStatus.innerHTML=snapshot.val().GateStatus;
+                   motionStatus.innerHTML=snapshot.val().MotionStatus;
+                  // console.log(snapshot.val().Coolantt);
+                  var a=(snapshot.val().Coolantt/70)*100;
+                
+                  var b=a+"%";
+                  var c=(snapshot.val().VegetableT/70)*100;
+                  var d=c+"%";
+                  var e=(snapshot.val().Humidity/100)*100;
+                  var f=e+"%";
+                  console.log(b);
+                  document.querySelector(".w3-grey").style.width= b;
+                  document.querySelector(".w4-grey").style.width= d;
+                  document.querySelector(".w5-grey").style.width= f;
+                  if(snapshot.val().Preserved=="preserve mode is OFF")
+                  { 
+                    document.querySelector(".preservativeCondns").style.color= "red";
+                  }
+                  if(snapshot.val().GateStatus=="OPENED")
+                  {
+                    document.querySelector(".gateStat").style.color= "red";
+                  }
+                  if(snapshot.val().MotionStatus==" Motion detected")
+                  {
+                    document.querySelector(".motionStat").style.color= "red";
+                  }
+
+                    
+                } else {
+                    alert("No data found");
+                }
+            })
+            .catch((error)=>{
+                alert(error)
+            })
+
+        }
+      FindData();
+     
+     
+  </script>
+  
+
+</html>

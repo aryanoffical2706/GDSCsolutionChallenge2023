@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <title>LoginPage</title>
+        <link rel="stylesheet" href="style.css">
+       
+        
+    </head>
+    
+
+     <body class="my-login-page">
+        <section class="h-100">
+            <div class="container h-100">
+                <div class="row justify-content-md-center h-100">
+                    <div class="card-wrapper">
+                        <div class="brand">
+                            <img src="login.jpg" alt="logo">
+                        </div>
+                        <div class="card fat">
+                            <div class="card-body">
+                                <h4 class="card-title">ID</h4>
+                                
+                                    <div class="form-group">
+                                        
+                                        <input id="userID" type="number" placeholder="Enter your ID" class="form-control" 
+                                            required autofocus>
+                                        <div class="invalid-feedback">
+                                            Email is invalid
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="form-group">
+                                        <label for="password">Password
+                                            <a href="forgot.html" class="float-right">
+                                                Forgot Password?
+                                            </a>
+                                        </label>
+                                        <input id="userPassword" type="password" placeholder="password" class="form-control" 
+                                            required data-eye>
+                                        <div class="invalid-feedback">
+                                            Password is required
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="form-group">
+                                        <div class="custom-checkbox custom-control">
+                                            <input type="checkbox" name="remember" id="remember"
+                                                class="custom-control-input">
+                                            <label for="remember" class="custom-control-label">Remember Me</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group m-0">
+                                        <button  class="btn btn-primary btn-block" id="signInButton">
+                                            Login
+                                        </button>
+                                    </div>
+                                    <br>
+                                    <div class="mt-4 text-center">
+                                        Don't have an account? <a href="signup.html">Create One</a>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                        <div class="footer">
+                            Copyright &copy; 2017 &mdash; Your Company
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <script type="module">
+
+            //THIS IS WHERE YOU PASTE THE CODE TO CONNECT TO YOUR OWN DATABASE
+            //Copy and paste the CDN bit of code from your app that you created on Firebase.
+            //The script tag above is already there, so careful not to have duplicate script tags.
+            //After you've copied and pasted, just delete the unnecessary script tags. 
+
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyBc1zW9myR2NuT1_9J8rdl7drhx8Y5jZy4",
+                authDomain: "fir-contact-51ee2.firebaseapp.com",
+                databaseURL: "https://fir-contact-51ee2-default-rtdb.firebaseio.com",
+                projectId: "fir-contact-51ee2",
+                storageBucket: "fir-contact-51ee2.appspot.com",
+                messagingSenderId: "1071276867428",
+                appId: "1:1071276867428:web:277919a3fe0adcb982c471",
+                measurementId: "G-37ZGEF3EXT"
+            };
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+
+
+
+
+
+            import { getDatabase, ref, get, set, child, update, remove }
+                from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
+            //Copy and Paste the URL from near the top of the CDN you pasted in from firebase
+            // (the one where you imported "initializeApp" from),
+            //but change "firebase-app" to "firebase-database"
+
+
+
+            const db = getDatabase();
+
+            var userID = document.querySelector("#userID");
+
+            var userPassword = document.querySelector("#userPassword");
+
+            var signInButton = document.querySelector("#signInButton");
+
+
+            function FindData() {
+                const dbref = ref(db);
+
+                get(child(dbref, "People/" + userID.value))
+                    .then((snapshot) => {
+                        if (snapshot.exists()) {
+                            if (userPassword.value == snapshot.val().Password) {
+                                window.location.href = "owner.html";
+                                
+                            }
+                            else {
+                                alert("Wrong password")
+                            }
+                        } else {
+                            alert("No data found");
+                        }
+                    })
+                    .catch((error) => {
+                        alert(error)
+                    })
+
+            }
+
+
+
+
+            signInButton.addEventListener('click', FindData);
+        </script>
+
+</html>
